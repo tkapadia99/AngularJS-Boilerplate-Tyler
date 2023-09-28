@@ -1,0 +1,20 @@
+[
+{
+    "JFK":{
+        "latitude": 40.641766,
+        "longitude": -73.780968
+    }
+},
+{
+    "ATL":{
+        "latitude": 33.640411,
+        "longitude": -84.419853
+    }
+},
+{
+    "DFW":{
+        "latitude": 32.897480,
+        "longitude":-97.040443
+    }
+}
+]

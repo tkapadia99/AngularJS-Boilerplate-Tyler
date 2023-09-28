@@ -92,6 +92,22 @@
 
 	<script type="text/javascript">
 		var map = L.map('map').setView([37, -95], 3);
+		var redIcon = new L.Icon({
+  			iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+			shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  			iconSize: [12, 20],
+  			iconAnchor: [6, 20],
+			shadowSize: [20, 20]
+		});
+
+		var homeIcon = new L.Icon({
+			iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+			shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+			iconSize: [12, 20],
+  			iconAnchor: [6, 20],
+			shadowSize: [20, 20]
+		});
+
 		L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			maxZoom: 19,
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'

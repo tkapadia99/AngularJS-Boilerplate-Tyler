@@ -23,7 +23,10 @@
 		<![endif]-->
 		<!-- or, set /favicon.ico for IE10 win -->
 		<meta name="msapplication-TileColor" content="#f01d4f">
-
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+		integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+		crossorigin=""/>
+   
 		<!-- CSS -->
 		<!-- build:css css/style.min.css -->
 		<link rel="stylesheet" href="bower_components/OwlCarousel/dist/assets/owl.carousel.css" />
@@ -43,6 +46,8 @@
 
 		<!-- Main view for templates -->
 		<div data-ng-view="" class="container"></div>
+
+		<div id="map"></div>
 
 	</body>
 
@@ -80,6 +85,18 @@
 	<!-- build:mainapp js/mainapp.js -->
 	<script type="text/javascript" src="app/factory.js"></script>
 	<script type="text/javascript" src="app/controller.js"></script>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+	integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+	crossorigin=""></script>
+
+	<script type="text/javascript">
+		var map = L.map('map').setView([51.505, -0.09], 13);
+		L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 19,
+			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		}).addTo(map);
+	</script>
 	<!-- endbuild -->
 
 	<!-- templates from $templateCache -->
@@ -96,4 +113,5 @@
 	    ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 	</script>
 
+	
 </html>

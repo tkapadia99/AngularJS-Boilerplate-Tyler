@@ -91,7 +91,7 @@
 	crossorigin=""></script>
 
 	<script type="text/javascript">
-		var map = L.map('map').setView([37, -95], 3);
+		var map = L.map('map').setView([37, -95], 4);
 		var redIcon = new L.Icon({
   			iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
 			shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -134,11 +134,11 @@
 
 		function addMarkers(origin, destinations){
 			//change color of marker
-			L.marker([origin.latitude, origin.longitude]).addTo(map);
+			L.marker([origin.latitude, origin.longitude], {icon: homeIcon}).addTo(map);
 
 			for (i = 0; i < destinations.length; i++){
 				destination = destinations[i];
-				L.marker([destination.latitude, destination.longitude]).addTo(map);
+				L.marker([destination.latitude, destination.longitude], {icon: redIcon}).addTo(map);
 			}
 
 		}

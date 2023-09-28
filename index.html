@@ -91,11 +91,14 @@
 	crossorigin=""></script>
 
 	<script type="text/javascript">
-		var map = L.map('map').setView([51.505, -0.09], 13);
+		var map = L.map('map').setView([37, -95], 3);
 		L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			maxZoom: 19,
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 		}).addTo(map);
+		L.marker([32.897480, -97.040443]).addTo(map);
+		L.marker([40.641766, -73.780968]).addTo(map);
+		L.marker([33.640411, -84.419853]).addTo(map);
 	</script>
 	<!-- endbuild -->
 
